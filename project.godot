@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Fasting Runner"
 run/main_scene="uid://g5cc3lxwx131"
-config/features=PackedStringArray("4.6", "GL Compatibility")
+config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [input]
@@ -29,6 +29,7 @@ right={
 [input_devices]
 
 pointing/emulate_touch_from_mouse=true
+pointing/emulate_mouse_from_touch=false
 
 [physics]
 

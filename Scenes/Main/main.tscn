@@ -1,42 +1,44 @@
-[gd_scene format=3 uid="uid://g5cc3lxwx131"]
+[gd_scene load_steps=6 format=3 uid="uid://g5cc3lxwx131"]
 
 [ext_resource type="Texture2D" uid="uid://j2c3kdjrvoxn" path="res://icon.svg" id="1_qw60k"]
 [ext_resource type="PackedScene" uid="uid://bjwml4lsovl2i" path="res://Scenes/Prefab/player.tscn" id="2_5yls4"]
 [ext_resource type="PackedScene" uid="uid://cuu4x574nrqt7" path="res://Scenes/Prefab/main_ui.tscn" id="3_p6jpk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_amr5s"]
-size = Vector2(997, 215)
+size = Vector2(1285, 215)
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_1r6ip"]
 
-[node name="Main" type="Node2D" unique_id=469795809]
+[node name="Main" type="Node2D"]
 
-[node name="Floor" type="StaticBody2D" parent="." unique_id=1819078306]
+[node name="Floor" type="StaticBody2D" parent="."]
 
-[node name="col" type="CollisionShape2D" parent="Floor" unique_id=928951136]
-position = Vector2(2.5, 97.5)
+[node name="col" type="CollisionShape2D" parent="Floor"]
+position = Vector2(-0.5, 97.5)
+scale = Vector2(1.0030802, 1.0177214)
 shape = SubResource("RectangleShape2D_amr5s")
 
-[node name="Sprite2D" type="Sprite2D" parent="Floor" unique_id=1203955396]
+[node name="Sprite2D" type="Sprite2D" parent="Floor"]
 position = Vector2(-3.0517578e-05, 96.99999)
 scale = Vector2(1264, 213.99998)
 texture = SubResource("PlaceholderTexture2D_1r6ip")
 
-[node name="Sprite2D2" type="Sprite2D" parent="Floor" unique_id=2039501668]
+[node name="Sprite2D2" type="Sprite2D" parent="Floor"]
 position = Vector2(435, -71)
 texture = ExtResource("1_qw60k")
 
-[node name="Sprite2D3" type="Sprite2D" parent="Floor" unique_id=88932275]
+[node name="Sprite2D3" type="Sprite2D" parent="Floor"]
 position = Vector2(328, -194)
 texture = ExtResource("1_qw60k")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Floor" unique_id=993312456]
+[node name="Sprite2D4" type="Sprite2D" parent="Floor"]
 position = Vector2(-262, -62)
 texture = ExtResource("1_qw60k")
 
-[node name="Player" parent="." unique_id=449672830 instance=ExtResource("2_5yls4")]
-position = Vector2(3, -265)
+[node name="Player" parent="." instance=ExtResource("2_5yls4")]
+position = Vector2(-18, -45)
 
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=655377734]
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(3.895, 3.895)
 
-[node name="MainUI" parent="." unique_id=403358523 instance=ExtResource("3_p6jpk")]
+[node name="MainUI" parent="." instance=ExtResource("3_p6jpk")]
