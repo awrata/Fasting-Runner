@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bjwml4lsovl2i"]
+
+[ext_resource type="Script" uid="uid://cojxa81pwis2c" path="res://Scripts/Core/Player/player_controller.gd" id="1_76v84"]
+[ext_resource type="Texture2D" uid="uid://j2c3kdjrvoxn" path="res://icon.svg" id="2_8e4xm"]
+[ext_resource type="Script" uid="uid://b0wb8iesn324m" path="res://Scripts/Core/BasicAbility/movement.gd" id="3_aect1"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_syx7w"]
+radius = 128.0
+height = 532.0
+
+[node name="Player" type="CharacterBody2D" unique_id=449672830 node_paths=PackedStringArray("movement")]
+script = ExtResource("1_76v84")
+movement = NodePath("Scripts/Movement")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1139706558]
+shape = SubResource("CapsuleShape2D_syx7w")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=966095046]
+position = Vector2(2.5, 11.499998)
+scale = Vector2(1.6015625, 3.9296877)
+texture = ExtResource("2_8e4xm")
+
+[node name="Scripts" type="Node" parent="." unique_id=1633828004]
+
+[node name="Movement" type="Node" parent="Scripts" unique_id=187977960 node_paths=PackedStringArray("controller")]
+script = ExtResource("3_aect1")
+controller = NodePath("../..")

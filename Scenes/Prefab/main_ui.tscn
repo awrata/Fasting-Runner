@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cuu4x574nrqt7"]
+
+[ext_resource type="Texture2D" uid="uid://bsnij4odvtpjf" path="res://Assets/UI/Left.png" id="1_5g3sp"]
+[ext_resource type="Texture2D" uid="uid://bk5s5og175oa8" path="res://Assets/UI/Right.png" id="2_6mefu"]
+
+[node name="MainUI" type="Control" unique_id=403358523]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=954176228]
+
+[node name="Left" type="TouchScreenButton" parent="HUD" unique_id=1775051813]
+position = Vector2(31.999998, 458)
+scale = Vector2(5.9375, 5.4375)
+texture_normal = ExtResource("1_5g3sp")
+action = "left"
+
+[node name="Right" type="TouchScreenButton" parent="HUD" unique_id=126541612]
+position = Vector2(237.00002, 453.00003)
+scale = Vector2(5.9375, 5.4375)
+texture_normal = ExtResource("2_6mefu")
+action = "right"
